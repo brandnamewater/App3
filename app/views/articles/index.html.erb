@@ -1,0 +1,19 @@
+<strong><h1> List of all em articles </h1></strong>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Textss</th>
+  </tr>
+
+  <% @articles.each do |article| %>
+  <tr>
+    <td><%= article.title %> </td>
+    <td><%= truncate(article.text, length: 75) %> </td>
+    <td><%= link_to 'Show', article_path(article) %> </td>
+  </tr>
+<% end %>
+
+
+<p>
+  <%= link_to 'Home', welcome_index_path %>
+</p>
