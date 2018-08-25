@@ -1,0 +1,25 @@
+<h1> Comments </h1>
+  <% @article.comments.each do |comment| %>
+  <p><strong>Commenter:</strong></p>
+  <%= comment.commenter %>
+
+  <p>
+    <%= comment.created_at %>
+  </p>
+
+  <p>
+    <strong>Comment</strong>
+    <%= comment.body %>
+  </p>
+
+  <p>
+    <%= link_to 'Delete', [comment.article, comment],
+        method: :Delete,
+        data: {confirm: 'Are you sure?'}
+     %>
+  </p>
+
+
+
+
+<% end %>
