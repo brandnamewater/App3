@@ -14,16 +14,56 @@
  */
 
 @import "bootstrap";
+@import "welcome";
+@import "navigation";
+@import "footer";
+
+
+body {
+  min-height: 75rem;
+  padding-top: 4.5rem;
+  overflow-x: hidden;
+}
+
+.white
+{
+  color: #ffffff;
+}
+
+.linktext
+{
+  color: #deddee;
+}
+
+.linktext:hover
+{
+  color: #ffffff;
+}
+
 
 .container
-{padding-top:15px}
+{
+  padding-top:15px
+}
 
-thead{
+thead
+{
   background-color: #dddddd;
 }
 
 .form-control
 {
   background-color: #efeeef;
-  border: 1px solid #000000;
+  border: 3px solid #000000;
+}
+
+.btn-light
+{
+  border: 3px solid #000000;
+}
+
+.jumbotron
+{
+  background-color: #ffff11;
+
 }
