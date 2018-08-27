@@ -39,6 +39,11 @@ gem 'bootstrap', '~> 4.1', '>= 4.1.3'
 gem 'sprockets-rails', '~> 3.2', '>= 3.2.1'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
 
+# for images
+gem 'paperclip', '~> 6.1'
+gem 'paperclip-av-transcoder', '~> 0.6.4'
+gem 'aws-sdk-s3', '~> 1.17'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

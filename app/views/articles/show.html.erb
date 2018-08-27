@@ -1,7 +1,11 @@
 <div class"row">
 <div class="col"></div>
 <div class="col-md-7">
+  <% if @article.photo.present? %>
+<%= image_tag(@article.photo, style: "width:100%") %>
+<% else %>
 <%= image_tag 'cxstudio.jpg', style: "width:100%" %>
+<% end %>
 <p>
   <strong>TITLE:</strong><br>
   <strong><%= @article.title %></strong>
@@ -16,7 +20,20 @@
   ARTICLE:<BR>
 </strong>
   <%= @article.text %>
-</p>
+  </p>
+  <p>
+    <% if @article.music.present? %>
+    <%= audio_tag(@article.music, controls: true, style: "width:100%") %>
+    <% end %>
+  </p>
+
+  <p>
+    <% if @article.movie.present? %>
+    <%= video_tag(@movie.music, controls: true,
+        type: 'video/mp4', style: "width:100%") %>
+    <% end %>
+  </p>
+
 
 <hr>
 
