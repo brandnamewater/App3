@@ -1,0 +1,33 @@
+
+<div class"row" style="padding-top:10%">
+<div class="col"></div>
+<div class="col-md-4">
+<h1>Please sign in</h1>
+<%= form_tag sessions_path do %>
+<%= text_field_tag :userid, nil, placeholder: 'Input user ID' %>
+<%= password_field_tag :password, nil, placeholder: 'Password' %>
+<%= submit_tag 'Sign In', class: 'btn btn-sm btn-primary' %>
+<% end %>
+
+<h1>Sessions#new</h1>
+<p>Find me in app/views/sessions/new.html.erb</p>
+
+
+
+
+
+
+
+
+<p>
+  <%= link_to 'Articles', articles_path, class: 'btn btn-sm btn-info' %>
+</p>
+
+<p>
+  <%= link_to 'Home', welcome_index_path, class: 'btn btn-sm btn-primary' %>
+</p>
+
+</div> <!-- 10 columns medium -->
+
+<div class="col"></div>
+</div>

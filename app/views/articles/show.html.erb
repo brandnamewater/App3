@@ -19,14 +19,21 @@
 </p>
 
 <hr>
+
 <%= render 'comments/comment' %>
+
+<% if current_user %>
+
 </hr>
 
 
 <%= render  'comments/form' %>
-
+<% else %>
+Please <%= link_to 'Sign In', new_session_path %> or
+      <%= link_to 'Sign up', new_user_path %> create a comment
+<% end %>
 <p>
-  <%= link_to 'Back', articles_path, class: 'btn btn-sm btn-info' %>
+<br>  <%= link_to 'Back', articles_path, class: 'btn btn-sm btn-info' %>
 </p>
 
 <p>
