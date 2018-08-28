@@ -1,7 +1,7 @@
 <div class"row">
 <div class="col"></div>
 <div class="col-md-7">
-  <% if @article.photo.present? %>
+<% if @article.photo.present? %>
 <%= image_tag(@article.photo, style: "width:100%") %>
 <% else %>
 <%= image_tag 'cxstudio.jpg', style: "width:100%" %>

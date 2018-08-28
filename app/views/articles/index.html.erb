@@ -6,14 +6,15 @@
 <strong><h1> List of all em articles </h1></strong>
 <% if current_user && current_user.admin? %>
 <p>
-<% end %>
   <%= link_to 'New Article', new_article_path, class: 'btn btn-lg btn-info' %>
 </p>
-
+<% end %>
 
 
 <table class="table table-hover table-striped table-responsive-xs">
   <tr>
+    <th>Photo</th>
+    <th>Date</th>
     <th>Title</th>
     <th>Textss</th>
     <% if current_user && current_user.admin? %>
@@ -25,6 +26,7 @@
 
   <% @articles.each do |article| %>
   <tr>
+    
     <td><%= article.title %> </td>
     <td><%= truncate(article.text, length: 75) %> </td>
     <td><%= link_to 'Show', article_path(article), class: 'btn btn-sm btn-info' %> </td>

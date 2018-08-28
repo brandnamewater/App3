@@ -8,6 +8,7 @@
 <strong><h1> List of all Subscribers </h1></strong>
 
 <table class="table table-hover table-striped table-responsive-xs">
+  <thead>
   <tr>
     <th>First Name</th>
     <th>Last Name</th>
@@ -15,7 +16,7 @@
     <th>Country</th>
     <th>Delete</th>
   </tr>
-
+</thead>
   <% @subscribers.each do |subscriber| %>
   <tr>
     <td><%= subscriber.f_name %> </td>
@@ -33,7 +34,7 @@
 <p>
   <%= link_to 'Home', welcome_index_path, class: 'btn btn-md btn-primary' %>
 </p>
-</div> 
+</div>
 
 <div class="col"></div>
 </div>

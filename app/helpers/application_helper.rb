@@ -11,7 +11,18 @@ module ApplicationHelper
   end
 
 
+def your_country
+    @my_country = options_for_select(['Country1', 'Country2', 'Country3', 'Country4'])
+   #return
+    #my_country
+  end
 
+#@your_country = options_for_select(['Country1', 'Country2', 'Country3', 'Country4'])
 
+#def your_country
+  #  my_country = ["Country1", "Country2", "Country3", "Country4"]
+  # return
+  #  my_country
+#  end
 
 end
